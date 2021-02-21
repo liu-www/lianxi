@@ -1,0 +1,51 @@
+<!-- 
+    1、创建数据库
+        create database qd111 character set utf8;
+        create database sshang character set utf8;
+    2、查看有哪些数据库
+        show databases；    
+    3、选择数据库
+        use qd111；
+        use sshang；
+    4、创建表（一定要设置ID） 
+        create table 表名（
+        字段名1 数据类型，
+        字段名2 数据类型，
+        ...
+        字段名n 数据类型
+        ）
+    5、数据类型
+        int     整型
+        float   浮点数
+        
+        char（10）      预设不可超
+        varchar（30）   预设可超
+        
+        data    日期     “2020-01-01”
+       
+        text    文本（理论上没有上限）  
+    6、查看当前数据库下的表
+        show tables；
+    7、查看表结构
+        desc 表名；
+    8、插入语句
+        insert into 表名（字段1，字段2..）values(具体的值1，具体的值2)；
+    9、查找表下面所以数据
+        select * from 表名；
+    10、修改表数据
+        update 表名 set 字段名1 = 新值，字段名2 = 新值..where 条件；
+    11、删除操作
+        delete from 表名 where 条件；
+        不添加条件会删除整个表的数据，但不会删除表
+    12、删除表
+        drop table 表名；
+    13、删除数据库
+        drop database （if exists）数据库名；
+        if exists   如果没有这个数据库也不报错
+
+
+
+
+
+
+ -->

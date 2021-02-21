@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            window.onload = function(){
+                var oBrn = document.getElementById("btn1");
+                oBrn.onclick = function(){
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("get","01.php",true);
+                    xhr.send();
+                    xhr.onreadystatechange = function(){                      
+                    result = xhr.responseText;                        
+                    // var arr = JSON.parse(result);
+                    // for(var i = 0; i<arr.length;i++){
+                    //     alert(i+","+arr[i]);
+                    // } 
+                    var arr = JSON.parse(result);
+                    alert(arr.username);                    
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn1">下载按钮</button>
+    </body>
+</html>

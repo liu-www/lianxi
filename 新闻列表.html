@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="ajax.js"></script>
+        <script>
+            window.onload=function(){
+                var oBtn = document.getElementById("btn1");
+                var oUl = document.getElementById("ul1");
+                
+                oBtn.onclick = function(){
+                    $ajax({
+                        method: "get",
+                        url: "getNews.php",
+                        success: function(result){
+                            alert(result);
+                        },
+                        error: function(msg){
+                            alert(msg);
+                        }
+                    })
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="btn1">获取新闻</button>
+        <ul id="ul1">
+            <li>
+                <!-- <a href="#">标题</a>
+                <span>【日期】</span> -->
+            </li>
+        </ul>
+    </body>
+</html>
